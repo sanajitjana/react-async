@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Strong } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 const Home = () => {
@@ -49,6 +49,9 @@ const Home = () => {
             ))}
           </tbody>
         </table>
+        <h5 className="my-5">
+          Copyright &copy; 2021 Sanajit Jana. All Rights Reserved.
+        </h5>
       </div>
     </>
   );

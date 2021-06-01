@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Strong } from "react";
 import axios from "axios";
 
 const Home = () => {
@@ -15,25 +15,36 @@ const Home = () => {
   };
   return (
     <>
-      <div class="container mt-5">
-        <table class="table shadow table-hover">
-          <thead class="table-dark">
+      <div className="container text-center">
+        <h1 className="my-5">
+          API Data Fetch using{" "}
+          <b>
+            <i> async</i>
+          </b>
+        </h1>
+        <table
+          className="table table-hover"
+          style={{ border: "1px solid black" }}
+        >
+          <thead className="table-dark">
             <tr>
-              <th scope="col">#</th>
-              <th scope="col">Name</th>
-              <th scope="col">Email</th>
-              <th scope="col">Phone</th>
-              <th>Action</th>
+              <th>#</th>
+              <th>Name</th>
+              <th>Phone</th>
+              <th>Email</th>
+              <th>Website</th>
             </tr>
           </thead>
           <tbody>
             {user.map((user, index) => (
               <tr>
-                <th scope="row">{index + 1}</th>
-                <th scope="row">{user.name}</th>
-                <th scope="row">{user.email}</th>
-                <th scope="row">{user.phone}</th>
-                <th>Action</th>
+                <td scope="row" style={{ height: "55px" }}>
+                  {index + 1}
+                </td>
+                <td>{user.name}</td>
+                <td>{user.phone}</td>
+                <td>{user.email}</td>
+                <td>{user.website}</td>
               </tr>
             ))}
           </tbody>
